@@ -1,12 +1,9 @@
 # Modern Android Development (MAD) Skills with Kotlin and Jetpack Compose
-
-## This is the first project. A Simple Happy Birthday App!
-
 Training course [here](https://developer.android.com/codelabs/basic-android-kotlin-compose-text-comosables?continue=https%3A%2F%2Fdeveloper.android.com%2Fcourses%2Fpathways%2Fandroid-basics-compose-unit-1-pathway-3%23codelab-https%3A%2F%2Fdeveloper.android.com%2Fcodelabs%2Fbasic-android-kotlin-compose-text-composables)
 
-<i>
-    In this file, I write down what I learned as I cover the tutorial.
-</i>
+<i>In this file, I write down what I learned as I cover the tutorial.</i>
+
+# 1. Build a simple app with text composables
 
 ### What I've learned in this project
 
@@ -40,9 +37,11 @@ Annotations can be witten with or without parameters. Parameters help the annota
 "extra things" than normal than what they normally do. For example, here is a `@Preview` annotation 
 with parameters:
 
-```@Preview(showBaground = true, showSystemUI = true)```
-```@Composable```
-```// You composable here...```
+<code>
+@Preview(showBackground = true, showSystemUI = true)
+    @Composable
+// You composable here...
+</code>
 
 
 ##### Fonts
@@ -54,10 +53,24 @@ based on the user's preferred text size under phone settings
 
 
 ### Tips and Tricks
-> Pass the modifier along with the attributes in the parent composable
-> Its a good idea to use padding values in multiples of 4.dp
+- Pass the modifier along with the attributes in the parent composable
+- Its a good idea to use padding values in multiples of 4.dp 
+- When building UI Components, use the Preview tab in Android Studio, click the element, and ask the question, do you want your changes to affect the children, i.e, the composable's contents? if so, you will unlikely use the `Modifier`, else, you will likely you it.
 
 
 ### Questions and doubts
 1) How do I know that a property belongs to the modifier or to the composable? For example, how do I 
 know that `verticalAlignment` is a _direct_ property of `Column` in the code below?
+- Hint #1 - The `Modifier` modifies the parent element, the element itself, and not the children. 
+- Modifiers allow you to decorate or augment a composable. Modifiers let you do these sorts of things:
+* Change the composable's size, layout, behavior, and appearance
+* Add information, like accessibility labels
+* Process user input
+* Add high-level interactions, like making an element clickable, scrollable, draggable, or zoomable
+
+Design (UI) Courses
+1) https://youtu.be/YmdtXc_bzDw
+2) https://youtu.be/Abj65tkSblQ
+
+# Add images to your Android app
+
